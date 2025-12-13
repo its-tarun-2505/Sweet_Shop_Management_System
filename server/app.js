@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import userRouter from './routes/user.js';
+import sweetRouter from './routes/sweet.js';
 import './db/db-connection.js';
 
 dotenv.config();
@@ -21,6 +22,9 @@ app.get('/api', (_, res) => res.send('Server is live!'));
 
 // Auth routes
 app.use('/api/auth', userRouter);
+
+// Sweets routes
+app.use('/api/sweets', sweetRouter);
 
 // Start server
 app.listen(PORT, () => {
