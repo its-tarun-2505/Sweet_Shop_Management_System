@@ -1,4 +1,5 @@
 import express from 'express';
+import verifyAdmin from '../middleware/verifyAdminRole.js';
 import {
     handleGetAllSweets,
     handleAddSweet,
@@ -16,7 +17,7 @@ const router = express.Router();
  */
 router
     .route('/')
-    .post(handleAddSweet)       // Add a new sweet
+    .post(verifyAdmin, handleAddSweet)       // Add a new sweet
     .get(handleGetAllSweets);   // Get all sweets
 
 /**
@@ -29,13 +30,13 @@ router.get('/search', handleSearchSweets);
  */
 router
     .route('/:id')
-    .put(handleUpdateSweetById)     // Update sweet
-    .delete(handleDeleteSweetById); // Delete sweet
+    .put(verifyAdmin, handleUpdateSweetById)     // Update sweet
+    .delete(verifyAdmin, handleDeleteSweetById); // Delete sweet
 
 /**
  * Business actions
  */
 router.post('/:id/purchase', handlePurchaseSweet); // Purchase sweet
-router.post('/:id/restock', handleRestockById);    // Restock sweet
+router.post('/:id/restock', verifyAdmin, handleRestockById);    // Restock sweet
 
 export default router;

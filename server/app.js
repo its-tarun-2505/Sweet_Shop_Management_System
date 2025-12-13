@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 
 import userRouter from './routes/user.js';
 import sweetRouter from './routes/sweet.js';
+import protect from './middleware/authMiddleware.js';
 import './db/db-connection.js';
 
 dotenv.config();
@@ -24,7 +25,7 @@ app.get('/api', (_, res) => res.send('Server is live!'));
 app.use('/api/auth', userRouter);
 
 // Sweets routes
-app.use('/api/sweets', sweetRouter);
+app.use('/api/sweets', protect, sweetRouter);
 
 // Start server
 app.listen(PORT, () => {
