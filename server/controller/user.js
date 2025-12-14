@@ -50,7 +50,7 @@ const handleLogin = async (req, res) => {
         // Step 1: Verify email exists
         const user = await User.findOne({ email });
         if (!user) {
-            const error = new Error('Invalid email or password');
+            const error = new Error(`Email Id doesn't exist`);
             error.statusCode = 401;
             throw error;
         }

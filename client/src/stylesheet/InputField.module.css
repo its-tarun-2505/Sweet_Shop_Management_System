@@ -1,0 +1,53 @@
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+/* Label */
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151; /* slate-700 */
+}
+
+/* Required star */
+.required {
+  color: #dc2626; /* red-600 */
+  margin-left: 2px;
+}
+
+/* Input */
+.input {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db; /* gray-300 */
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  color: #111827; /* gray-900 */
+}
+
+/* Focus state */
+.input:focus {
+  border-color: #2563eb; /* blue-600 */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Placeholder */
+.input::placeholder {
+  color: #9ca3af; /* gray-400 */
+}
+
+/* Disabled */
+.input:disabled {
+  background-color: #f3f4f6; /* gray-100 */
+  cursor: not-allowed;
+}
+
+/* Error state (optional usage) */
+.input.error {
+  border-color: #dc2626;
+}

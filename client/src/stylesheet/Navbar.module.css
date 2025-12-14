@@ -1,0 +1,70 @@
+/* Navbar container */
+.navbar {
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+/* Brand / Logo */
+.brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #111827;
+}
+
+/* Navigation links */
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.links a:hover {
+  color: #2563eb;
+}
+
+/* Auth section */
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logged-in user text */
+.user {
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+/* Buttons */
+.primaryBtn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ghostBtn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+}
+
+.ghostBtn:hover {
+  background-color: #f3f4f6;
+}

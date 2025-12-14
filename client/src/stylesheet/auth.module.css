@@ -1,0 +1,66 @@
+/* Full-page wrapper to center auth card */
+.authWrapper {
+  /* height: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb; /* subtle neutral background */
+  /* padding: 16px; */
+}
+
+/* Auth card */
+.authCard {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Page title */
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Message from backend (error / success) */
+.message {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #dc2626;
+}
+
+/* Primary button */
+.button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Disabled button */
+.button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}

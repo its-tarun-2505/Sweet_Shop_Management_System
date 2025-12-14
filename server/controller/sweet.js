@@ -19,7 +19,7 @@ const handleGetAllSweets = async (req, res) => {
             throw error;
         }
 
-        return Response(res, sweets, 200, 'Fetched sweets successfully!');
+        return Response(res, { sweets }, 200, 'Fetched sweets successfully!');
     } catch (error) {
         return ErrorResponse(res, error);
     }
@@ -121,7 +121,7 @@ const handleSearchSweets = async (req, res) => {
 
         const sweets = await Sweet.find(query).lean();
 
-        return Response(res, sweets, 200, 'Search results fetched successfully');
+        return Response(res, { sweets }, 200, 'Search results fetched successfully');
     } catch (error) {
         return ErrorResponse(res, error);
     }
@@ -157,7 +157,7 @@ const handleUpdateSweetById = async (req, res) => {
 
         const sweet = sweetDoc._doc;
 
-        return Response(res, sweet, 200, 'Sweet updated successfully!');
+        return Response(res, { sweet }, 200, 'Sweet updated successfully!');
     } catch (error) {
         return ErrorResponse(res, error);
     }
