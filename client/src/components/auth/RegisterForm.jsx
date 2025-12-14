@@ -17,7 +17,7 @@ const RegisterForm = () => {
     name: "",
     email: "",
     password: "",
-    role: "",
+    role: "user",
   });
 
   // Update state on input change
@@ -59,13 +59,42 @@ const RegisterForm = () => {
             required
           />
 
-          <InputField
-            label="Role"
-            name="role"
-            value={formData.role}
-            onChange={handleChange}
-            placeholder="Enter role"
-          />
+          {/* Role Selection */}
+          <div className={styles.roleSection}>
+            <label className={styles.roleLabel}>Role<sup style={{color:'red'}}>*</sup></label>
+
+            <div className={styles.roleOptions}>
+              <button
+                type="button"
+                className={`${styles.roleBtn} ${
+                  formData.role === "user" ? styles.active : ""
+                }`}
+                onClick={() =>
+                  setFormData({
+                    ...formData,
+                    role: "user",
+                  })
+                }
+              >
+                User
+              </button>
+
+              <button
+                type="button"
+                className={`${styles.roleBtn} ${
+                  formData.role === "admin" ? styles.active : ""
+                }`}
+                onClick={() =>
+                  setFormData({
+                    ...formData,
+                    role: "admin",
+                  })
+                }
+              >
+                Admin
+              </button>
+            </div>
+          </div>       
 
           <InputField
             label="Password"
