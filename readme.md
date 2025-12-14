@@ -1,4 +1,5 @@
 # Sweet Shop Management System
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-SweetShop.com-blue?style=for-the-badge&logo=firefox)](https://sweet-shop-management-system-blond.vercel.app/)
 
 **Project explanation**
 
