@@ -49,9 +49,34 @@ const AdminSweetForm = () => {
 
       <InputField label="Name" name="name" value={form.name} onChange={handleChange} required />
       <InputField label="Category" name="category" value={form.category} onChange={handleChange} required />
-      <InputField label="Price" type="number" name="price" value={form.price} onChange={handleChange} required />
-      <InputField label="Quantity" type="number" name="quantity" value={form.quantity} onChange={handleChange} required />
-      <InputField label="Unit" name="unit" value={form.unit} onChange={handleChange} />
+      <InputField label="Price" type="number" name="price" value={form.price} min="0" onChange={handleChange} required />
+      <InputField label="Quantity" type="number" name="quantity" value={form.quantity} min="0" onChange={handleChange} required />
+      {/* Unit Selection */}
+      <div className={styles.unitSection}>
+        <label className={styles.unitLabel}>Unit</label>
+
+        <div className={styles.unitOptions}>
+          <button
+            type="button"
+            className={`${styles.unitBtn} ${
+              form.unit === "kg" ? styles.active : ""
+            }`}
+            onClick={() => setForm({ ...form, unit: "kg" })}
+          >
+            Kg
+          </button>
+
+          <button
+            type="button"
+            className={`${styles.unitBtn} ${
+              form.unit === "piece" ? styles.active : ""
+            }`}
+            onClick={() => setForm({ ...form, unit: "piece" })}
+          >
+            Piece
+          </button>
+        </div>
+      </div>
 
       <button className={styles.button} type="submit">
         Add Sweet

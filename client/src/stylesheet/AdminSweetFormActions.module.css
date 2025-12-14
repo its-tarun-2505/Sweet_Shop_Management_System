@@ -15,6 +15,46 @@
   margin-bottom: 8px;
 }
 
+.unitSection {
+  margin-bottom: 1rem;
+}
+
+.unitLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.unitOptions {
+  display: flex;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.unitBtn {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 14px;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.unitBtn:hover {
+  /* background: #f9fafb; */
+}
+
+.active {
+  background: #2564ebbb;
+  color: #ffffff;
+  font-weight: 600;
+}
+
 .button {
   margin-top: 10px;
   padding: 10px;
