@@ -88,7 +88,7 @@ Add screenshots to `docs/screenshots` with names like `screenshot-1.png` and `sc
 
 **Publishing / Deliverables**
 
-1. Public repo: create a public Git repository and push this project. Replace the placeholder below with your real repo URL:
+1. Public repo: created a public Git repository and push the project.
 
 - Repository link: https://github.com/its-tarun-2505/sweet-shop-management-system
 
